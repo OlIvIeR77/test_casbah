@@ -25,6 +25,8 @@ object Mongo extends App {
 		
 		println(Color.cyan("the following DBObject was successfully inserted in Mongodb"))
 		println(Color.red(builder.result.asDBObject.toString)) 
+
+		for { x <- mongoColl} yield println(x)
 	}
 
 }
